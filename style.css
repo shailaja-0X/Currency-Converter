@@ -1,0 +1,169 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d0d0e;
+    color: #e2e2e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #141416;
+    border: 1px solid #282830;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff4500; /* Orange underline */
+    padding-bottom: 10px;
+}
+
+/* Selection Controls Container */
+.search-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #1a1a1e;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #282830;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #ff4500; /* Orange labels */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Common form control styles for Inputs and Selects */
+input[type="number"], select {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #0d0d0e;
+    color: #ffffff;
+    border: 1px solid #3a3a44;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"] {
+    cursor: text;
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #e60000; /* Red focus border */
+    box-shadow: 0 0 5px rgba(230, 0, 0, 0.3);
+}
+
+/* Action Button */
+#refresh-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #e60000 0%, #ff4500 100%); /* Red to Orange gradient */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.1s;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.2);
+}
+
+#refresh-btn:hover {
+    filter: brightness(1.15);
+}
+
+#refresh-btn:active {
+    transform: scale(0.98);
+}
+
+/* Cards Layout */
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #1a1a1e;
+    border: 1px solid #282830;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle red accent bar on top of cards */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e60000;
+}
+
+.card h3 {
+    font-size: 0.85rem;
+    color: #a0a0a8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Data Display inside both panels */
+#rate-display, #inverse-display {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    word-break: break-all;
+}
+
+/* Special orange pop highlight for the primary dynamic conversion card */
+#rate-display {
+    color: #ff4500;
+    text-shadow: 0 0 8px rgba(255, 69, 0, 0.15);
+}
+
+/* Status Banner */
+#status-msg {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #80808c;
+    padding-top: 5px;
+    border-top: 1px solid #282830;
+}
